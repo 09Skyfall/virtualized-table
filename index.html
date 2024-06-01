@@ -8,5 +8,45 @@
     <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
+    <div class="wrapper">
+      <table is="virtualized-table" buffer="5" row-height="60">
+        <thead>
+          <tr><th>header 1</th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+      
+    <style>
+      .wrapper {
+        border: 1px solid red;
+        height: 500px;
+        overflow: auto;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      table thead {
+        position: fixed
+      }
+
+      table tr {
+        height: 60px;
+        background-color: white;
+        border-top: 1px solid #dadde1;
+      }
+
+      table thead {
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+      table td {
+        color: inherit;
+        border: 1px solid #dadde1;
+        padding: 0.75rem;
+      }
+    </style>
   </body>
 </html>
